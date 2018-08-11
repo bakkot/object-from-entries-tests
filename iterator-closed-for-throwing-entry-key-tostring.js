@@ -11,27 +11,26 @@ function DummyError() {}
 
 var returned = false;
 var iterable = {
-  [Symbol.iterator]() {
-    var first = true;
+  [Symbol.iterator]: function() {
+    var advanced = false;
     return {
-      next() {
-        if (first) {
-          first = false;
-          return {
-            done: false,
-            value: {
-              0: {
-                toString() {
-                  throw new DummyError();
-                },
-              }
-            },
-          };
-        } else {
-          throw new Test262Error('should not call next more than once');
+      next: function() {
+        if (advanced) {
+          throw new Test262Error('should only advance once');
         }
+        advanced = true;
+        return {
+          done: false,
+          value: {
+            0: {
+              toString: function() {
+                throw new DummyError();
+              },
+            },
+          },
+        };
       },
-      return() {
+      return: function() {
         if (returned) {
           throw new Test262Error('should only return once');
         }

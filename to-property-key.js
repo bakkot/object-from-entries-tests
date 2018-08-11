@@ -8,7 +8,7 @@ features: [Symbol.toPrimitive, Object.fromEntries]
 ---*/
 
 var key = {
-  [Symbol.toPrimitive](hint) {
+  [Symbol.toPrimitive]: function(hint) {
     assert.sameValue(hint, 'string');
     return 'key';
   },

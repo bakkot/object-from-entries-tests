@@ -2,21 +2,21 @@
 // This code is governed by the BSD license found in the LICENSE file.
 
 /*---
-description: Key enumeration order of result objects matches the order of entries in the iteratble.
+description: Key enumeration order of result objects matches the order of entries in the iterable.
 esid: sec-object.fromentries
 includes: [compareArray.js]
 features: [Object.fromEntries]
 ---*/
 
 var entries = [
-  ['a', 1],
-  ['b', 2],
-  ['c', 3],
-  ['b', 4],
+  ['z', 1],
+  ['y', 2],
+  ['x', 3],
+  ['y', 4],
 ];
 
 var result = Object.fromEntries(entries);
-assert.sameValue(result['a'], 1);
-assert.sameValue(result['b'], 4);
-assert.sameValue(result['c'], 3);
-assert.compareArray(Object.keys(result), ['a', 'b', 'c']);
+assert.sameValue(result['z'], 1);
+assert.sameValue(result['y'], 4);
+assert.sameValue(result['x'], 3);
+assert.compareArray(Object.keys(result), ['z', 'y', 'x']);

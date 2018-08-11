@@ -8,10 +8,10 @@ features: [Symbol.iterator, Object.fromEntries]
 ---*/
 
 var iterable = {
-  [Symbol.iterator]() {
+  [Symbol.iterator]: function() {
     var count = 0;
     return {
-      next() {
+      next: function() {
         if (count === 0) {
           ++count;
           return {
@@ -36,7 +36,7 @@ var iterable = {
         } else {
           return {
             done: true,
-          }
+          };
         }
       },
     };
@@ -44,5 +44,5 @@ var iterable = {
 };
 
 var result = Object.fromEntries(iterable);
-assert.sameValue(result['first key'], 'first value', '');
-assert.sameValue(result['second key'], 'second value', '');
+assert.sameValue(result['first key'], 'first value');
+assert.sameValue(result['second key'], 'second value');

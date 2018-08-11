@@ -10,12 +10,12 @@ features: [Symbol.iterator, Object.fromEntries]
 function DummyError() {}
 
 var iterable = {
-  [Symbol.iterator]() {
+  [Symbol.iterator]: function() {
     return {
-      next() {
+      next: function() {
         throw new DummyError();
       },
-      return() {
+      return: function() {
         throw new Test262Error('should not call return');
       },
     };

@@ -8,10 +8,10 @@ features: [Symbol.iterator, Object.fromEntries]
 ---*/
 
 var iterable = {
-  [Symbol.iterator]() {
+  [Symbol.iterator]: function() {
     return {
       next: null,
-      return() {
+      return: function() {
         throw new Test262Error('should not call return');
       },
     };

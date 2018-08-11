@@ -11,17 +11,16 @@ function DummyError() {}
 
 var returned = false;
 var iterable = {
-  [Symbol.iterator]() {
-    var first = true;
+  [Symbol.iterator]: function() {
     return {
-      next() {
+      next: function() {
         return {
           get done() {
             throw new DummyError();
           },
         };
       },
-      return() {
+      return: function() {
         throw new Test262Error('should not call return');
       },
     };

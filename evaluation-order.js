@@ -15,7 +15,7 @@ function makeEntry(label) {
     get '0'() {
       effects.push('access property "0" of ' + label + ' entry');
       return {
-        toString() {
+        toString: function() {
           effects.push('toString of ' + label + ' key');
           return label + ' key';
         },
@@ -29,11 +29,11 @@ function makeEntry(label) {
 }
 
 var iterable = {
-  [Symbol.iterator]() {
+  [Symbol.iterator]: function() {
     effects.push('get Symbol.iterator');
     var count = 0;
     return {
-      next() {
+      next: function() {
         effects.push('next ' + count);
         if (count === 0) {
           ++count;
@@ -70,5 +70,5 @@ assert.compareArray(effects, [
   'toString of second key',
   'next 2',
 ], 'Object.fromEntries evaluation order');
-assert.sameValue(result['first key'], 'first value', '');
-assert.sameValue(result['second key'], 'second value', '');
+assert.sameValue(result['first key'], 'first value');
+assert.sameValue(result['second key'], 'second value');
