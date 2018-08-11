@@ -2,9 +2,8 @@
 // This code is governed by the BSD license found in the LICENSE file.
 
 /*---
+description: Object.fromEntries.name is "fromEntries".
 esid: sec-object.fromentries
-description: >
-  Object.fromEntries.name is "fromEntries".
 includes: [propertyHelper.js]
 features: [Object.fromEntries]
 ---*/

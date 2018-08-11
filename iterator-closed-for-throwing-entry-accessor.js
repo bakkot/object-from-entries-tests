@@ -2,8 +2,7 @@
 // This code is governed by the BSD license found in the LICENSE file.
 
 /*---
-description: >
-  Object.fromEntries closes iterators when accessing an entry's properties throws.
+description: Closes iterators when accessing an entry's properties throws.
 esid: sec-object.fromentries
 features: [Symbol.iterator, Object.fromEntries]
 ---*/
@@ -45,4 +44,3 @@ assert.throws(DummyError, function() {
 });
 
 assert(returned, 'iterator should be closed when entry property access throws');
-

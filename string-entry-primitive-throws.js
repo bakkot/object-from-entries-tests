@@ -2,8 +2,7 @@
 // This code is governed by the BSD license found in the LICENSE file.
 
 /*---
-description: >
-  Object.fromEntries throws when an entry object is a primitive string
+description: Throws when an entry object is a primitive string.
 esid: sec-object.fromentries
 features: [Object.fromEntries]
 ---*/

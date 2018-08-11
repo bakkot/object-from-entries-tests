@@ -2,9 +2,7 @@
 // This code is governed by the BSD license found in the LICENSE file.
 
 /*---
-description: >
-  Object.fromEntries reads properties "0 and "1" of entry objects, rather
-  than using @@iterator.
+description: Reads properties rather than iterating.
 esid: sec-object.fromentries
 features: [Symbol.iterator, Object.fromEntries]
 ---*/

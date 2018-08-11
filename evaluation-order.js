@@ -2,9 +2,7 @@
 // This code is governed by the BSD license found in the LICENSE file.
 
 /*---
-description: >
-  Object.fromEntries evaluation order is iterator.next(), get '0', get '1',
-  toPropertyKey, repeat.
+description: Evaluation order is iterator.next(), get '0', get '1', toPropertyKey, repeat.
 esid: sec-object.fromentries
 includes: [compareArray.js]
 features: [Symbol.iterator, Object.fromEntries]

@@ -2,8 +2,7 @@
 // This code is governed by the BSD license found in the LICENSE file.
 
 /*---
-description: >
-  Object.fromEntries closes iterators when they return entries which are strings.
+description: Closes iterators when they return entries which are strings.
 esid: sec-object.fromentries
 features: [Symbol.iterator, Object.fromEntries]
 ---*/
@@ -39,4 +38,3 @@ assert.throws(TypeError, function() {
 });
 
 assert(returned, 'iterator should be closed when entry is a string');
-

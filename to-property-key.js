@@ -2,8 +2,7 @@
 // This code is governed by the BSD license found in the LICENSE file.
 
 /*---
-description: >
-  Object.fromEntries coerces keys to strings using ToPropertyKey.
+description: Coerces keys to strings using ToPropertyKey.
 esid: sec-object.fromentries
 features: [Symbol.toPrimitive, Object.fromEntries]
 ---*/

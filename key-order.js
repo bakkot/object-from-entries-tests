@@ -2,9 +2,7 @@
 // This code is governed by the BSD license found in the LICENSE file.
 
 /*---
-description: >
-  Object.fromEntries creates objects whose key evaluation order matches
-  the order of entries in its argument.
+description: Key enumeration order of result objects matches the order of entries in the iteratble.
 esid: sec-object.fromentries
 includes: [compareArray.js]
 features: [Object.fromEntries]

@@ -2,8 +2,7 @@
 // This code is governed by the BSD license found in the LICENSE file.
 
 /*---
-description: >
-  Object.fromEntries closes iterators when toString on a key throws.
+description: Closes iterators when toString on a key throws.
 esid: sec-object.fromentries
 features: [Symbol.iterator, Object.fromEntries]
 ---*/

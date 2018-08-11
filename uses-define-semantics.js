@@ -2,8 +2,7 @@
 // This code is governed by the BSD license found in the LICENSE file.
 
 /*---
-description: >
-  Object.fromEntries uses [[DefineOwnProperty]] rather than [[Set]].
+description: Uses [[DefineOwnProperty]] rather than [[Set]].
 esid: sec-object.fromentries
 features: [Object.fromEntries]
 ---*/

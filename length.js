@@ -2,8 +2,7 @@
 // This code is governed by the BSD license found in the LICENSE file.
 
 /*---
-description: >
-  Object.fromEntries.length is 1.
+description: Object.fromEntries.length is 1.
 esid: sec-object.fromentries
 includes: [propertyHelper.js]
 features: [Object.fromEntries]

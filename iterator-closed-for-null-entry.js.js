@@ -2,8 +2,7 @@
 // This code is governed by the BSD license found in the LICENSE file.
 
 /*---
-description: >
-  Object.fromEntries closes iterators when they return entries which are null.
+description: Closes iterators when they return entries which are null.
 esid: sec-object.fromentries
 features: [Symbol.iterator, Object.fromEntries]
 ---*/

@@ -2,8 +2,7 @@
 // This code is governed by the BSD license found in the LICENSE file.
 
 /*---
-description: >
-  Object.fromEntries throws when called without an argument.
+description: Throws when called without an argument.
 esid: sec-object.fromentries
 features: [Object.fromEntries]
 ---*/

@@ -2,9 +2,7 @@
 // This code is governed by the BSD license found in the LICENSE file.
 
 /*---
-description: >
-  Object.fromEntries does not close iterators when the iterators are broken
-  by having an uncallable `next` property.
+description: Does not close iterators with an uncallable `next` property.
 esid: sec-object.fromentries
 features: [Symbol.iterator, Object.fromEntries]
 ---*/

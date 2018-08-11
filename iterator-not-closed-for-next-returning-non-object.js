@@ -2,9 +2,7 @@
 // This code is governed by the BSD license found in the LICENSE file.
 
 /*---
-description: >
-  Object.fromEntries does not close iterators when the iterators are broken
-  by having a `next` method which returns a non-object.
+description: Does not close iterators with a `next` method which returns a non-object.
 esid: sec-object.fromentries
 features: [Symbol.iterator, Object.fromEntries]
 ---*/
